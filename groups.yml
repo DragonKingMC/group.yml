@@ -1,0 +1,149 @@
+groups:
+  Default:
+    default: true
+    permissions:
+    - essentials.back
+    - essentials.back.ondeath
+    - essentials.hat
+    - essentials.say
+    - essentials.time
+    - essentials.pay
+    - essentials.balance
+    - essentials.balancetop
+    - essentials.balance.others
+    - essentials.warp
+    - essentials.signs.use.*
+    - essentials.sethome
+    - essentials.delhome
+    - essentials.spawn
+    - essentials.kit.*
+    - essentials.home
+    - essentials.tpaccept
+    - essentials.tpahere
+    - essentials.tpa
+    - essentials.tpdeny
+    - essentials.home
+    - essentials.msg
+    - essentials.rules
+    - essentials.afk
+    inheritance:[]
+    info:
+      prefix: '&f[Membru]'
+      build: true
+      suffix: ''
+  VIP:
+    default: false
+    permissions:
+    - essentials.fly
+    - essentials.tp
+    - essentials.tphere
+    - essentials.gamemode
+    inheritance:
+    - Default
+    info:
+      prefix: '&5[VIP]'
+      build: true
+      suffix: ''
+  Helper:
+    default: false
+    permissions: 
+    - essentials.kick
+    - essentials.mute
+    - essentials.jail
+    inheritance:
+    - default
+    - vip
+    info:
+      prefix: '&6[Helper]'
+      build: true
+      suffix: ''
+  Builder:
+    default: false
+    permissions:
+    - essentials.sudo
+    inheritance:
+    - default
+    - membru
+    - helper
+    - vip
+    info:
+      prefix: '&2[Builder]'
+      build: true
+      suffix: ''
+  Moderator:
+    default: false
+    permissions:
+    - essentials.unban
+    - essentials.ban
+    inheritance:
+    - builder
+    - default
+    - helper
+    - vip
+    info:
+      prefix: '&5[Moderator]'
+      build: true
+      suffix: ''
+  Designer:
+    default: false
+    permissions:
+    - worldedit.*
+    inheritance:
+    - default
+    - builder 
+    - helper
+    - vip
+    - moderator
+    info:
+      prefix: '&b[Designer]'
+  Admin:
+    default: false
+    permissions: 
+    - '*'
+    - -vanish.*
+    inheritance:
+    - moderator
+    - vip
+    - default 
+    - helper
+    - designer
+    info:
+      prefix: '&9&l[Admin]'
+      build: true
+      suffix: ''
+  Co-Owner:
+    default: false
+    permissions:
+    - '*'
+    - -vanish.*
+    inheritance:
+    - owner
+    - admin
+    info:
+      prefix: '&4[Co-Owner]'
+      build: true
+      suffix: ''
+  Owner:
+    default: false
+    permissions:
+    - '*'
+    - -vanish.*
+    inheritance:
+    - admin
+    info:
+      prefix: '&4&l[Owner]'
+      build: true
+      suffix: ''
+  Fondator:
+    default: false
+    permissions:
+    - '*'
+    - -vanish.*
+    inheritance:
+    - admin
+    - owner
+    info:
+      prefix: '&c[Fondator]'
+      build: true
+      suffix: ''
+  
